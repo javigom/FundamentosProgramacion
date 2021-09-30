@@ -1,4 +1,4 @@
-// Calculadora polinÛmica. Pr·ctica realizada por ¡lvaro Lopez Olmos y Javier GÛmez Moraleda (1∫F) 
+// Calculadora polin√≥mica. Pr√°ctica realizada por √Ålvaro Lopez Olmos y Javier G√≥mez Moraleda (1¬∫F) 
 
 //Bibliotecas
 #include <iostream>
@@ -20,7 +20,7 @@ float evaluar(tPolinomio usuario, float n);
 void leerPolinomioGradoDos(tPolinomio usuario);
 void calcularRaices(tPolinomio usuario);
 
-//FunciÛn principal
+//Funci√≥n principal
 int main()
 {
 	int op;
@@ -29,7 +29,7 @@ int main()
 	do {
 		op = menu();
 
-		if (op == 1) //Si la opciÛn es 1, deriva el polinomio
+		if (op == 1) //Si la opci√≥n es 1, deriva el polinomio
 		{
 			leerPolinomio(usuario);
 			cout << "Polinomio introducido: ";
@@ -40,7 +40,7 @@ int main()
 			cout << endl;
 		}
 
-		else if (op == 2) //Si la opciÛn es 2, integra el polinomio
+		else if (op == 2) //Si la opci√≥n es 2, integra el polinomio
 		{
 			cout << "(Solo para polinomios de grado 4 como maximo)" << endl;
 			leerPolinomio(usuario);
@@ -58,7 +58,7 @@ int main()
 			cout << endl;
 		}
 
-		else if (op == 3) //Si la opciÛn es 3, evalua el polinomio
+		else if (op == 3) //Si la opci√≥n es 3, evalua el polinomio
 		{
 			leerPolinomio(usuario);
 			cout << "Introduce un valor de x: ";
@@ -69,7 +69,7 @@ int main()
 			cout << "El valor polinomio para x = " << x << " es " << evaluado << endl << endl;
 		}
 
-		else if (op == 4) //Si la opciÛn es 4, calcula las raices del polinomio
+		else if (op == 4) //Si la opci√≥n es 4, calcula las raices del polinomio
 		{
 			leerPolinomioGradoDos(usuario);
 			cout << "Polinomio introducido: ";
@@ -77,7 +77,7 @@ int main()
 			calcularRaices(usuario);
 		}
 
-		else //Si la opciÛn es 5, sale del programa
+		else //Si la opci√≥n es 5, sale del programa
 		{
 			cout << "Has salido del programa." << endl;
 		}
@@ -88,7 +88,7 @@ int main()
 	return 0;
 }
 
-//FunciÛn que muestra el men˙ y pide una opcion al usuario entre 1 y 5
+//Funci√≥n que muestra el men√∫ y pide una opcion al usuario entre 1 y 5
 int menu() 
 {
 	int opcion;
@@ -101,7 +101,7 @@ int menu()
 	cout << "Elija opcion: ";
 	cin >> opcion;
 
-	while (cin.fail() || (opcion < 1) || (opcion > 5)) //Si la opciÛn no es un entero y est· entre 1 y 5, vuelve a solicitarla
+	while (cin.fail() || (opcion < 1) || (opcion > 5)) //Si la opci√≥n no es un entero y est√° entre 1 y 5, vuelve a solicitarla
 	{
 		cin.clear();
 		cin.ignore();
@@ -112,7 +112,7 @@ int menu()
 	return opcion;
 }
 
-//FUnciÛn que lee por pantalla el polinomio que introduce el usuario
+//FUnci√≥n que lee por pantalla el polinomio que introduce el usuario
 void leerPolinomio(tPolinomio polinomio) 
 {
 	for (int i = 0; i < MAX; i++)
@@ -122,7 +122,7 @@ void leerPolinomio(tPolinomio polinomio)
 	}
 }
 
-//FunciÛn que muestra por pantalla el polinomio almacenado en el array
+//Funci√≥n que muestra por pantalla el polinomio almacenado en el array
 void mostrarPolinomio(tPolinomio polinomio)
 {
 	bool cero = true;
@@ -174,7 +174,7 @@ void mostrarPolinomio(tPolinomio polinomio)
 	cout << endl;
 }
 
-//FunciÛn que deriva el polinomio y lo almacena derivado en otro array
+//Funci√≥n que deriva el polinomio y lo almacena derivado en otro array
 void derivarPolinomio(tPolinomio usuario, tPolinomio derivado)
 {
 	derivado[MAX - 1] = 0;
@@ -184,7 +184,7 @@ void derivarPolinomio(tPolinomio usuario, tPolinomio derivado)
 	}
 }
 
-//FunciÛn que integra el polinomio y lo almacena en otro array
+//Funci√≥n que integra el polinomio y lo almacena en otro array
 bool integrarPolinomio(tPolinomio usuario, tPolinomio integrado)
 {
 	bool integracion = true; //Booleano que comprueba que el usuario introduza un polinomio de grado 4
@@ -206,7 +206,7 @@ bool integrarPolinomio(tPolinomio usuario, tPolinomio integrado)
 	return integracion;
 }
 
-//FunciÛn que evalua un polinomio en funciÛn del valor introducido por el usuario
+//Funci√≥n que evalua un polinomio en funci√≥n del valor introducido por el usuario
 float evaluar(tPolinomio usuario, float n)
 {
 	float resultado = 0;
@@ -217,7 +217,7 @@ float evaluar(tPolinomio usuario, float n)
 	return resultado;
 }
 
-//FunciÛn que lee un polinomio para calcular sus raices (sÛlo lee hasta grado 2)
+//Funci√≥n que lee un polinomio para calcular sus raices (s√≥lo lee hasta grado 2)
 void leerPolinomioGradoDos(tPolinomio usuario)
 {
 	cout << "Introduce un polinomio de grado 2." << endl;
@@ -231,20 +231,20 @@ void leerPolinomioGradoDos(tPolinomio usuario)
 		usuario[i] = 0;
 	}
 }
-//FunciÛn que calcula las raices del polinomio de grado 2
+//Funci√≥n que calcula las raices del polinomio de grado 2
 void calcularRaices(tPolinomio usuario)
 {
 	float a = usuario[2], b = usuario[1], c = usuario[0];
 	float sol1, sol2;
 	float raiz = (pow(b, 2) - 4 * (a*c));
-	if (raiz >= 0) //Comprueba si el contenido de la raiz es positivo para calcular la soluciÛn
+	if (raiz >= 0) //Comprueba si el contenido de la raiz es positivo para calcular la soluci√≥n
 	{
 		sol1 = ((-b + sqrt(raiz)) / (2 * a));
 		sol2 = ((-b - sqrt(raiz)) / (2 * a));
 
 		if (sol1 == sol2)
 		{
-			cout << "La ˙nica soluciÛn del polinomio es x = " << sol1 << endl << endl;
+			cout << "La √∫nica soluci√≥n del polinomio es x = " << sol1 << endl << endl;
 		}
 
 		else
